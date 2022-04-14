@@ -16,6 +16,7 @@ public class Main {
         System.out.println(a1.GetRegistryItem(LocalDate.of(2001, 10, 12)));
         System.out.println(a1.GetRegistryItem(LocalDate.of(2005, 11, 23)));
         System.out.println(a1.allDate());
+        a1.allBook();
     }
 }
 
@@ -43,6 +44,12 @@ class Library {
     public Set<LocalDate> allDate() {
         return RegisteryBook.keySet();
     }
+
+    public void allBook() {
+        for (String books : RegisteryBook.values()) {
+            System.out.println(books);
+        }
+    }
 }
 
 //// Каждый раз, когда вы берете книгу, она также должна быть добавлена ​​в отчет библиотеки.
@@ -53,3 +60,4 @@ class Library {
 //// например, «На эту дату нет книг» (или что-то еще).
 
 // Также выведите диапазон дат взятых книг
+// И отдельно список книг для всего ассортимента.
